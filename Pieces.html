@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+				initial-scale=1.0, maximum-scale=0.8, 
+				user-scalable=no">
+				
+				
+    <title>Hugh O'Flaherty</title>
+    <style>
+        @font-face {
+            font-family: 'PokemonDPPro';
+            src: url('pokemon-dp-pro.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+		
+			cursor: url('Cursor.png'), auto;
+			cursor: url('CursorB.png'), pointer;
+            font-family: 'PokemonDPPro', Arial, sans-serif;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0cm;
+			left: 0cm;
+			max-width: 100%
+			overflow: hidden;
+			
+        }
+		
+		  .container {
+            max-width: 500px; /* Set the maximum width */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 0px; /* Add padding to create space between content and edges */
+        }
+
+              .header {
+            
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    background-color: white;
+    
+    z-index: 100;
+    text-align: center; /* Center the content horizontally */
+    padding: 0cm;
+	transition: top 0.3s ease;
+
+        }
+
+        .heading {
+            margin: 0;
+			font-size: 50 px;
+			margin-top: 1cm;
+        }
+
+        .sub-heading {
+            margin: 0;
+			font-size: 40 px;
+            margin-top: 0.5cm; /* Add margin to create space between heading and sub-heading */
+        }
+        
+    .content {
+    display: block;
+    block-direction: row;
+    align-items: block-start;
+    background-color: white;
+	
+    padding: 1cm;
+    max-width: 100%; 
+    overflow-x: hidden;
+	font-size: 22px;
+	margin-top: 2cm;
+	margin-left: 2cm;
+}
+
+	.links a {
+    color: black; /* Default link color */
+
+	 text-decoration: none; /* Remove the underline */
+    font-size: 40px; 
+	
+
+}
+
+.links a:hover,
+.links a:hover:visited {
+    color: pink; /* Link color when hovered */
+}
+
+.links a:visited {
+    color: black; /* Link color for visited links */
+}
+
+.links ul {
+    list-style-type: none; /* Use circle markers */
+}
+
+.links {
+    position: fixed;
+	
+	font-size: 50px
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 100px; /* Set the initial top position just below the header */
+    transition: top 0.3s ease; 
+}
+
+        .main-content {
+            background-color: white;
+			margin-left: 2cm;
+			
+            padding: .25cm;
+			padding-top: .25cm;
+			
+            max-width: 100%;
+			font-size 25px;
+			
+			
+        }
+		
+		.main-content img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		
+        .clock-calendar {
+            position: absolute;
+            top: 4cm;
+            right: calc(1cm + 2vw);
+            font-size: 28px;
+			padding-top: .25cm;
+			padding-bottom: .25cm;
+        }
+        .clock-calendar span {
+            display: block;
+      
+	  
+	
+    </style>
+		    <script>
+        
+    </script>
+    <script>
+        function updateClockCalendar() {
+            const now = new Date();
+            const clock = document.getElementById('clock');
+            const calendar = document.getElementById('calendar');
+            
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            
+            clock.textContent = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+            calendar.textContent = formattedDate;
+        }
+        
+        setInterval(updateClockCalendar, 1000); // Update every second
+    </script>
+	
+	  <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('.header');
+            const links = document.querySelector('.links');
+            let prevScrollY = window.scrollY;
+            const scrollThreshold = 100; // Adjust this threshold as needed
+
+            function handleScroll() {
+                const currentScrollY = window.scrollY;
+                const scrollDirection = currentScrollY > prevScrollY ? 'down' : 'up';
+
+                if (currentScrollY > scrollThreshold) {
+                    if (scrollDirection === 'down') {
+                        header.style.top = '-60px';
+                        links.style.top = '0';
+                    } else {
+                        header.style.top = '0';
+                        links.style.top = '50px'; // Adjust this value for desired position
+                    }
+                } else {
+                    header.style.top = '0';
+                    links.style.top = '100px'; // Adjust this value to match initial position
+                }
+
+                prevScrollY = currentScrollY;
+            }
+
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+	
+
+	
+</head>
+<body>
+    
+           <div class="header">
+        <h1 class="heading">H U G H	  O ' F L A H E R T Y</h1>
+        <h2 class="sub-heading">Official Web Address</h2>
+    </div>
+    <div class="content">
+        <div class="links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="works.html">WORK</a></li>
+				<li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+		
+		<p></p>
+		
+        <div class="main-content">
+		
+
+			
+			<p>
+			<i> Pieces </i> was a series of digitally manipulated sketches I carried
+			out during my second year at NCAD. I still regard them as some of my
+			best work.
+			</p>
+			
+				<p>
+			<i>1/5 Return to The Grid part B </i></p>
+			
+			<p>
+			<b>Pigment Liner, Digital Collage, COLLADA 3D modelling language </b> 
+			</p>
+			
+			<img src="https://i.imgur.com/TpmanZ3.png">
+			
+			
+			
+			
+			
+				<p>
+			<i>2/5 Return to The Grid part A </i></p>
+			
+			<p>
+			<b>Pigment Liner, Digital Collage, COLLADA 3D modelling language </b> 
+			</p>
+			
+			<img src="https://i.imgur.com/1zxReFC.jpg">
+			
+			<p>
+			<i>4/5 The Tower</i></p>
+			
+			<p>
+			<b>Pigment Liner, Oil Pastel, Digital Collage</b> 
+			</p>
+			
+			<img src="https://i.imgur.com/IeHlIlP.png">
+			
+			<p>
+			<i>3/5 121 Cork Street (Kitchen)</i></p>
+			
+			<p>
+			<b>Pigment Liner, Digital Collage</b> 
+			</p>
+			
+			<img src="https://i.imgur.com/1sFytg8.png">
+			
+			
+				<p>
+			<i>5/5 Redwoods</i></p>
+			
+			<p>
+			<b>Pigment Liner, Digital Collage</b> 
+			</p>
+			
+			<img src="https://i.imgur.com/fQgaHLv.png">
+			
+			
+        </div>
+    </div>
+    <div class="clock-calendar">
+        <span id="clock"></span>
+        <span id="calendar"></span>
+    </div>
+</body>
+</html>
